@@ -67,6 +67,7 @@ padding:20px;
 .hero h1{
 font-size:55px;
 margin-bottom:15px;
+animation:fadeUp 1.5s ease-out;
 }
 
 .hero span{
@@ -86,16 +87,30 @@ border-radius:30px;
 text-decoration:none;
 color:black;
 font-weight:bold;
+transition:0.3s;
+    animation:fadeUp 2s ease-out;
 }
 
 .btn:hover{
 background:white;
+transform:scale(1.08);
+box-shadow:0 0 20px #00d4ff;
 }
 
 footer{
 text-align:center;
 padding:25px;
 background:#111827;
+}
+@keyframes fadeUp{
+    from{
+     opacity:0;
+     transform:translateY(40px);
+    }
+    to{
+     opacity:1;
+     transform:translateY(0);
+    }
 }
 </style>
 </head>
@@ -117,7 +132,7 @@ background:#111827;
 
 <div>
 
-<h1>Hi, I'm <span>Modulux Power</span></h1>
+<h1>Welcom to<span>Modulux Power</span></h1>
 
 <p>
 Complete Electrical Panel Design<br>
