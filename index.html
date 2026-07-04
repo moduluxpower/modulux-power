@@ -201,6 +201,9 @@ Explore our Projects
 style="display:inline-block;background:#25D366;color:white;padding:15px 35px;border-radius:30px;text-decoration:none;font-weight:bold;font-size:18px;">
 📅 Book Appointment
 </a>
+
+</div>
+        
 <div style="display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
@@ -356,7 +359,7 @@ let name=document.getElementById("name").value;
 let purpose=document.getElementById("purpose").value;
 let phone=document.getElementById("phone").value;
 
-let msg=*New Appointment Request*%0A%0AName: ${name}%0APurpose: ${purpose}%0AContact: ${phone};
+let msg='*New Appointment Request*%0A%0AName: ${name}%0APurpose: ${purpose}%0AContact: ${phone}';
 
 window.open("https://wa.me/917682061120?text="+msg,"_blank");
 }
