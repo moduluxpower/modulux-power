@@ -333,25 +333,35 @@ GitHub
 
 <input id="name" type="text" placeholder="Your Name" style="width:100%;padding:10px;margin:10px 0;">
 
-<select id="purpose" style="width:100%;padding:10px;margin:10px 0;">
-    <option value="">Select Required Service</option>
-    <option>SLD Diagram</option>
-    <option>Control Wiring Diagram</option>
-    <option>Panel GA Drawing</option>
-    <option>BOM Preparation</option>
-    <option>BOQ Preparation</option>
-    <option>LT Panel Design</option>
-    <option>Cable Schedule</option>
-    <option>Load Calculation</option>
-    <option>Electrical Estimation</option>
-    <option>Panel Modification</option>
-    <option>APFC Panel Design</option>
-    <option>PCC Panel Design</option>
-    <option>MCC Panel Design</option>
-    <option>ACDB Panel Design</option>
-    <option>AutoCAD Electrical Drawing</option>
-    <option>Electrical Consultancy</option>
-    <option>Other</option>
+<label><b>Select Required Services:</b></label><br><br>
+
+<label><input type="checkbox" name="service" value="SLD Diagram"> SLD Diagram</label><br>
+
+<label><input type="checkbox" name="service" value="Control Wiring Diagram"> Control Wiring Diagram</label><br>
+
+<label><input type="checkbox" name="service" value="Panel GA Drawing"> Panel GA Drawing</label><br>
+
+<label><input type="checkbox" name="service" value="BOM Preparation"> BOM Preparation</label><br>
+
+<label><input type="checkbox" name="service" value="BOQ Preparation"> BOQ Preparation</label><br>
+
+<label><input type="checkbox" name="service" value="LT Panel Design"> LT Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="HT Panel Design"> HT Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="APFC Panel Design"> APFC Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="PCC Panel Design"> PCC Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="MCC Panel Design"> MCC Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="ACDB Panel Design"> ACDB Panel Design</label><br>
+
+<label><input type="checkbox" name="service" value="AutoCAD Electrical Drawing"> AutoCAD Electrical Drawing</label><br>
+
+<label><input type="checkbox" name="service" value="Electrical Consultancy"> Electrical Consultancy</label><br>
+
+<label><input type="checkbox" name="service" value="Other"> Other</label><br><br>
 </select>
 
 <input id="phone" type="tel" placeholder="Contact Number" style="width:100%;padding:10px;margin:10px 0;">
@@ -374,7 +384,9 @@ document.getElementById("appointmentPopup").style.display="none";
 
 function sendWhatsApp(){
  let name=document.getElementById("name").value;
- let purpose=document.getElementById("purpose").value;
+ let purpose = Array.from(document.querySelectorAll('input[name="service"]:checked'))
+.map(item => item.value)
+.join(", ");
  let phone=document.getElementById("phone").value;
 
  
